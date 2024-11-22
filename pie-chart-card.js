@@ -56,6 +56,10 @@ class PieChartCard extends HTMLElement {
     var entityData = hassEntities.map(x => x === undefined ? 0 : x.state);
     card.header = config.title ? config.title : 'Pie Chart';
 
+    // If the legend does not exist, default to true
+    const legend = config.legend != undefined ? config.legend : 'true';
+
+    
     if (config.total_amount){
         const totalEntity =  hass.states[config.total_amount]
         var total = 0;
