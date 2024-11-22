@@ -16,6 +16,7 @@ This card will display a doughnut chart based on your specified entities. This w
 | type | `string` | **Required** | `custom:pie-chart-card`
 | entities | `array` | **Required** | A list of [`Entity` objects](#entity-object).
 | title | `string` | "Pie Chart" | Title of the card.
+| legend | `boolean` | true | Show legend.
 | total_amount | `string` | none | Either an entity or number which provides the total value for the pie chart. If provided, then other measured values will be substracted from total to calculate 'unknown' value.
 | unknownText | `string` | none | Optional customized unknown text. Only applicable with `total_amount` option enabled.
 
@@ -54,11 +55,12 @@ This card will display a doughnut chart based on your specified entities. This w
       name: Slice 3
 ```
 
-### Total Amount Using a Number
+### Total Amount Using a Number, no legend
 ```yaml
 - type: "custom:pie-chart-card"
   title: "Example Pie Chart"
   total_amount: 10000
+  legend: false
   entities:
     - entity: sensor.example_1
       name: Slice 1
