@@ -58,8 +58,10 @@ class PieChartCard extends HTMLElement {
 
     // If the legend does not exist, default to true
     const legend = config.legend != undefined ? config.legend : 'true';
-
     
+    // If the height does not exist, default to 480px
+    content.style.height = config.height != undefined ? config.height : '480px';
+
     if (config.total_amount){
         const totalEntity =  hass.states[config.total_amount]
         var total = 0;
