@@ -92,7 +92,7 @@ class PieChartCard extends HTMLElement {
             animation: { duration: 0 },
             legend: {
                 position: 'bottom',
-                display: true
+                display: config.legend
              },
             hover: { mode: 'index' },
             plugins: {colorschemes: { scheme: 'brewer.DarkTwo8' } },
